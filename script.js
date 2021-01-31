@@ -81,13 +81,17 @@ $(document).ready(function () {
         window.localStorage.setItem(time, comments);
 
         console.log(this);
-        
-
-
     }
 
-
-    $("#comment9am .textarea").val(localStorage.getItem("comment9am"))
+    $("#comment9am").val(localStorage.getItem("button9am"));
+    $("#comment10am").val(localStorage.getItem("button10am"));
+    $("#comment11am").val(localStorage.getItem("button11am"));
+    $("#comment12pm").val(localStorage.getItem("button12pm"));
+    $("#comment1pm").val(localStorage.getItem("button1pm"));
+    $("#comment2pm").val(localStorage.getItem("button2pm"));
+    $("#comment3pm").val(localStorage.getItem("button3pm"));
+    $("#comment4pm").val(localStorage.getItem("button4pm"));
+    $("#comment5pm").val(localStorage.getItem("button5pm"));
 
 
 
