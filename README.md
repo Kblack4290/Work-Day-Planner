@@ -1,53 +1,15 @@
 # Work-Day-Planner
-# 05 Third-Party APIs: Work Day Scheduler
 
-## Your Task
+!(https://kblack4290.github.io/Work-Day-Planner/)
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Here is a work day scheduler to help keep the user organized throughout the day. 
 
-You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
+The current date wil display above the text area and will change each day to the current day. 
 
-  * [Luxon](https://moment.github.io/luxon/)
+The user will know if the hour is past present or future by the textarea being color coded. If it is past time then the color will be grey, if it is current then the color is red, and if the time is in the future the color will be green. 
 
-  * [Day.js](https://day.js.org/)
+The user can submit tasks in the hour block and save. The user can close the planner and go back to it later and still see their previous tasks displayed in the hour block. 
 
-  * [date-fns](https://date-fns.org/)
+This application will help the user become more organized and stay on top of their tasks.
 
-  * [js-Joda](https://js-joda.github.io/js-joda/)
-
-Whichever library you choose, be sure to read the documentation carefully!
-
-
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-
-## Acceptance Criteria
-
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+![Window screenshot](/Images/Work_Planner_Screenshot.png?raw=true "Work Day Scheduler")
