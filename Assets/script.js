@@ -41,35 +41,31 @@ $(document).ready(function () {
         } console.log(resNumber);
         console.log(this);
 
-        if (resNumber == 24) {
 
-            $("textarea").addClass("past")
-
-        }
         // if it is pastime then color is grey / if resNumber < currentHour change class to .past
 
-        if (currentHour > resNumber) {
+        if (currentHour > resNumber || resNumber == 24) {
 
-            $("textarea").addClass("past")
-
+            $(this).parent().siblings("textarea").addClass("past")
 
         }
         // if it is the current time then the color is red
 
         else if (currentHour == resNumber) {
 
-            $(this).addClass("current")
-            $("textarea").addClass("current")
+            $(this).parent().siblings("textarea").addClass("current-time")
 
         }
-        // save text content to local storage when I click the save button
 
+        // if it is future then the color is green
+        else {
+
+            $(this).parent().siblings("textarea").addClass("future")
+        }
 
     })
-    console.log(moment().hours());
 
-
-
+    // save text content to local storage when I click the save button
     $(".saveBtn").on("click", save)
 
     function save() {
@@ -83,6 +79,7 @@ $(document).ready(function () {
         console.log(this);
     }
 
+    // when I refresh the page the content in the text area remains
     $("#comment9am").val(localStorage.getItem("button9am"));
     $("#comment10am").val(localStorage.getItem("button10am"));
     $("#comment11am").val(localStorage.getItem("button11am"));
@@ -92,10 +89,5 @@ $(document).ready(function () {
     $("#comment3pm").val(localStorage.getItem("button3pm"));
     $("#comment4pm").val(localStorage.getItem("button4pm"));
     $("#comment5pm").val(localStorage.getItem("button5pm"));
-
-
-
-    // when I refresh the page the content in the text area remains
-
 
 });
