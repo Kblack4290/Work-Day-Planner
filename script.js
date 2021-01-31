@@ -15,6 +15,8 @@
 // ```
 
 $(document).ready(function () {
+
+    // time to display using moments api
     $("#currentDay").text(moment().format('dddd, MMMM Do'));
 
     $(".hour").each(function () {
@@ -29,7 +31,7 @@ $(document).ready(function () {
         var res = timeBlock.split(":");
         var timeOfDay = timeBlock.split(" ")
         console.log(timeOfDay);
-        
+
         var resNumber = parseInt(res);
         console.log(resNumber);
 
@@ -60,10 +62,36 @@ $(document).ready(function () {
             $("textarea").addClass("current")
 
         }
-
+        // save text content to local storage when I click the save button
 
 
     })
     console.log(moment().hours());
+
+
+
+    $(".saveBtn").on("click", save)
+
+    function save() {
+
+        var comments = $(this).parent().siblings("textarea").val();
+        console.log(comments);
+        var time = $(this).attr("id");
+        console.log(time);
+        window.localStorage.setItem(time, comments);
+
+        console.log(this);
+        
+
+
+    }
+
+
+    $("#comment9am .textarea").val(localStorage.getItem("comment9am"))
+
+
+
+    // when I refresh the page the content in the text area remains
+
 
 });
